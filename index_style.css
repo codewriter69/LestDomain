@@ -1,0 +1,104 @@
+/*-----------------------normalize-css-----------------------*/                  */
+/* Universal Box Sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove default list styles */
+ul, ol {
+  list-style: none;
+}
+
+/* Reset anchor styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Remove outline on focused elements, but keep accessibility */
+button, input, textarea, select {
+  font: inherit;
+  border: none;
+  outline: none;
+}
+
+/* Reset form elements */
+input, button, textarea, select {
+  background: none;
+  border: none;
+  outline: none;
+  font: inherit;
+}
+
+/* Ensure images and media don’t overflow */
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Remove default button styles */
+button {
+  background: none;
+  cursor: pointer;
+}
+
+/* Set a default body style */
+body {
+  font-family: sans-serif;
+  line-height: 1.5;
+  color: #333;
+  background-color: #fff;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Ensure full height */
+html, body {
+  height: 100%;
+}
+
+/* Avoid scrollbar jumps */
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* Prevent default styling for headings */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+/* Responsive text sizing */
+html {
+  font-size: 16px;
+}
+
+/* Custom focus styles for accessibility */
+:focus {
+  outline: 2px solid blue;
+  outline-offset: 2px;
+}
+
+/*-----------------------end normalize-css-----------------------*/
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:aqua;
+    height: 3rem;
+}
+
+.logo, .hyperlinks {
+    margin: 2em;
+}
+
+.logo {
+    font-weight: bolder;
+}
