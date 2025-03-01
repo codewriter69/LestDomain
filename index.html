@@ -5,10 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LestDomain</title>
     <link rel="stylesheet" href="index_style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet" defer>   
 </head>
 <body>
     <div class="header-container">
-        <div class="logo">LestDomain</div>
+        <div class="logo">
+            <a href="index.html">
+                <svg width="300" height="100" viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Gradient Definition -->
+                    <defs>
+                        <linearGradient id="smoothGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#FF6B6B"/>
+                            <stop offset="100%" stop-color="#556270"/>
+                        </linearGradient>
+                        <filter id="glow">
+                            <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="rgba(255, 107, 107, 0.5)"/>
+                        </filter>
+                    </defs>
+                
+                    <!-- Custom Handwritten, Fully Connected Text -->
+                    <text x="20" y="80" font-family="'Dancing Script', cursive" font-size="58" font-weight="bold" 
+                        fill="url(#smoothGradient)" filter="url(#glow)">
+                        LestDomain
+                    </text>
+                </svg>
+            </a> 
+        </div>
         <div class="hyperlinks">
             <a href="#">Home</a>
             <a href="#">Posts</a>

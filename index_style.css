@@ -93,12 +93,13 @@ html {
     align-items: center;
     background-color:aqua;
     height: 3rem;
+    border-radius: 1em;
 }
 
 .logo, .hyperlinks {
-    margin: 2em;
+    margin: 1.5em;
 }
 
 .logo {
-    font-weight: bolder;
+    
 }
