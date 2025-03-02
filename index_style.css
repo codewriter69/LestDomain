@@ -89,6 +89,7 @@ html {
 
 /*-----------------------end normalize-css-----------------------*/
 
+/*-----------------------Style for index page-----------------------*/
 body {
   background-image: url(images/background-image.jpg);
   /* Full height */
@@ -160,6 +161,7 @@ body {
 }
 
 
+
 .random-message-container {
   font-size: 1.5em;
   color: #888;
@@ -185,11 +187,13 @@ body {
 }
 
 
+/*-----------------------End Style for index page-----------------------*/
+
+/*-----------------------Style for Posts page-----------------------*/
 
 
 
-
-
+/*-----------------------End Style for posts page-----------------------*/
 
 
 
