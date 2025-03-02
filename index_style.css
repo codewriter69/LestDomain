@@ -89,11 +89,27 @@ html {
 
 /*-----------------------end normalize-css-----------------------*/
 
+body {
+  background-image: url(images/background-image.jpg);
+  /* Full height */
+  height: 100%;
+  width: 100%;
+  margin: 0;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  font-family: "'Dancing Script', cursive";
+}
+
+
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color:cadetblue;
+    background-color:cornflowerblue;
     height: 3rem;
     width: 100vw;
     max-width: 100%;
@@ -124,6 +140,7 @@ html {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-top: 3rem;
 }
 
 .recent-posts-list {
@@ -132,17 +149,39 @@ html {
   width: 35vw;
 }
 
-body {
-  background-image: url(images/background-image.jpg);
-  /* Full height */
-  height: 100%;
+.footer-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
   width: 100%;
-  margin: 0;
+  text-align: center;
+  padding: 10px;
+  color: aliceblue;
+}
 
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+
+.random-message-container {
+  font-size: 1.5em;
+  color: #888;
+  text-align: center;
+  margin-top: 20px;
+  font-family: 'Comic Sans MS', cursive;
+  font-style: italic;
+  white-space: nowrap; /* Prevent text from wrapping */
+  border-right: 2px solid #888; /* Adds a blinking cursor effect */
+  animation: blink 0.7s step-end infinite; /* Cursor blinking animation */
+}
+
+@keyframes blink {
+  0% {
+      border-right-color: transparent;
+  }
+  50% {
+      border-right-color: #888;
+  }
+  100% {
+      border-right-color: transparent;
+  }
 }
 
 
