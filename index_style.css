@@ -61,6 +61,7 @@ body {
 /* Ensure full height */
 html, body {
   height: 100%;
+  width: 100%;
 }
 
 /* Avoid scrollbar jumps */
@@ -93,13 +94,60 @@ html {
     align-items: center;
     background-color:aqua;
     height: 3rem;
+    width: 100vw;
+    max-width: 100%;
     border-radius: 1em;
 }
 
-.logo, .hyperlinks {
-    margin: 1.5em;
+.logo-container, .hyperlinks-container {
+    margin: 1em;
 }
 
-.logo {
-    
+.hyperlinks-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 10em;
 }
+
+.hyperlinks {
+  font-size: 1.1em;
+  color: black;
+}
+
+.welcome {
+  text-align: center;
+}
+
+.recent-posts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.recent-posts-list {
+  border: 2px solid red;
+  height: 50vh;
+  width: 35vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

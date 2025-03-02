@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LestDomain</title>
     <link rel="stylesheet" href="index_style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet" defer>   
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">   
 </head>
 <body>
     <div class="header-container">
-        <div class="logo">
+        <div class="logo-container">
             <a href="index.html">
-                <svg width="300" height="100" viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
+                <svg class ="logo" width="300" height="100" viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
                     <!-- Gradient Definition -->
                     <defs>
                         <linearGradient id="smoothGradient" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -31,11 +31,16 @@
                 </svg>
             </a> 
         </div>
-        <div class="hyperlinks">
-            <a href="#">Home</a>
-            <a href="#">Posts</a>
-            <a href="#">About</a>
+        <div class="hyperlinks-container">
+            <a class="hyperlinks" href="#">Home</a>
+            <a class="hyperlinks" href="#">Posts</a>
+            <a class="hyperlinks" href="#">About</a>
         </div>
+    </div>
+    <h1 class="welcome">Welcome to my Domain!</h1>
+    <div class="recent-posts">
+        <h2 class="recent-posts-heading"><u>Recent Posts</u></h2>
+        <div class="recent-posts-list"></div>
     </div>
 </body>
 </html>  
