@@ -191,7 +191,21 @@ body {
 
 /*-----------------------Style for Posts page-----------------------*/
 
+.posts-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+.posts-header {
+  text-align: center;
+}
+
+.posts-list {
+  border: 2px solid pink;
+  height: 50vh;
+  width: 35vw;
+}
 
 /*-----------------------End Style for posts page-----------------------*/
 
