@@ -125,7 +125,7 @@ function displayPosts() {
 
     paginatedPosts.forEach(post => {
         const li = document.createElement("li");
-        li.textContent = `<a href="${post.url}">${post.title}</a>`;
+        li.insertAdjacentHTML("beforeend", `<a href="${post.url}">${post.title}</a>`);
         postList.appendChild(li);
     });
 
