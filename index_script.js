@@ -1,3 +1,5 @@
+//------------------Add dynamic quotes to the homepage------------------------------//
+
 document.addEventListener('DOMContentLoaded', function() {
     // Comic and funny motivational quotes
     const quotes = [
@@ -94,3 +96,56 @@ document.addEventListener('DOMContentLoaded', function() {
     const randomQuote = getRandomQuote();
     typeMessage(randomQuote);
 });
+
+
+//------------------End of Add dynamic quotes to the homepage------------------------------//
+
+//------------------Paginate Posts-----------------------------//
+const posts = [
+    { title: "Post 1", url: "posts/post1.html" },
+    { title: "Post 2", url: "posts/post2.html" },
+    { title: "Post 3", url: "posts/post3.html" },
+    { title: "Post 4", url: "posts/post4.html" },
+    { title: "Post 5", url: "posts/post5.html" },
+    { title: "Post 6", url: "posts/post6.html" },
+    { title: "Post 7", url: "posts/post7.html" },
+    { title: "Post 8", url: "posts/post8.html" }
+];
+
+const postsPerPage = 4;
+let currentPage = 1;
+
+function displayPosts() {
+    const postList = document.getElementById("postList");
+    postList.textContent = ""; // Clear list
+
+    const start = (currentPage - 1) * postsPerPage;
+    const end = start + postsPerPage;
+    const paginatedPosts = posts.slice(start, end);
+
+    paginatedPosts.forEach(post => {
+        const li = document.createElement("li");
+        li.textContent = `<a href="${post.url}">${post.title}</a>`;
+        postList.appendChild(li);
+    });
+
+    document.getElementById("pageNumber").textContent = `Page ${currentPage}`;
+    document.getElementById("prevPage").disabled = currentPage === 1;
+    document.getElementById("nextPage").disabled = end >= posts.length;
+}
+
+document.getElementById("prevPage").addEventListener("click", () => {
+    if (currentPage > 1) {
+        currentPage--;
+        displayPosts();
+    }
+});
+
+document.getElementById("nextPage").addEventListener("click", () => {
+    if (currentPage * postsPerPage < posts.length) {
+        currentPage++;
+        displayPosts();
+    }
+});
+
+displayPosts(); // Load the first page
