@@ -102,14 +102,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
 //------------------Paginate Posts-----------------------------//
 const posts = [
-    { title: "Post 1", url: "posts/post1.html" },
-    { title: "Post 2", url: "posts/post2.html" },
-    { title: "Post 3", url: "posts/post3.html" },
-    { title: "Post 4", url: "posts/post4.html" },
-    { title: "Post 5", url: "posts/post5.html" },
-    { title: "Post 6", url: "posts/post6.html" },
-    { title: "Post 7", url: "posts/post7.html" },
-    { title: "Post 8", url: "posts/post8.html" }
+    { title: "Post 1", date: "03/03/2025", url: "posts/post1.html" },
+    { title: "Post 2", date: "03/03/2025", url: "posts/post2.html" },
+    { title: "Post 3", date: "03/03/2025", url: "posts/post3.html" },
+    { title: "Post 4", date: "03/03/2025", url: "posts/post4.html" },
+    { title: "Post 5", date: "03/03/2025", url: "posts/post5.html" },
+    { title: "Post 6", date: "03/03/2025", url: "posts/post6.html" },
+    { title: "Post 7", date: "03/03/2025", url: "posts/post7.html" },
+    { title: "Post 8", date: "03/03/2025", url: "posts/post8.html" }
 ];
 
 const postsPerPage = 4;
@@ -125,7 +125,7 @@ function displayPosts() {
 
     paginatedPosts.forEach(post => {
         const li = document.createElement("li");
-        li.insertAdjacentHTML("beforeend", `<a href="${post.url}">${post.title}</a>`);
+        li.insertAdjacentHTML("beforeend", `<a href="${post.url}">${post.title}<br>${post.date}</br></a>`);
         postList.appendChild(li);
     });
 
@@ -149,3 +149,5 @@ document.getElementById("nextPage").addEventListener("click", () => {
 });
 
 displayPosts(); // Load the first page
+
+//------------------End Paginate Posts-----------------------------//
