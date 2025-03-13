@@ -83,7 +83,6 @@ html {
 
 /* Custom focus styles for accessibility */
 :focus {
-  outline: 2px solid blue;
   outline-offset: 2px;
 }
 
@@ -107,13 +106,13 @@ body {
 
 
 .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color:cornflowerblue;
-    height: 3rem;
-    width: 100vw;
-    max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color:cornflowerblue;
+  height: 3rem;
+  width: 100vw;
+  max-width: 100%;
 }
 
 .logo-container, .hyperlinks-container {
@@ -134,6 +133,29 @@ body {
 
 .welcome {
   text-align: center;
+  font-weight: bold;
+}
+
+.welcome::after {
+  display: block;
+  content: "We post anything and everything!";
+  color: gray;
+  font-size: 0.5em;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-header {
+  font-weight: bold;
+}
+
+.about-para {
+  font-size: 1.5rem;
 }
 
 .recent-posts {
@@ -159,6 +181,11 @@ body {
   color: aliceblue;
 }
 
+
+.hyperlinks:hover {
+  transform: translateY(-2px);
+  color: aqua;
+}
 
 
 .random-message-container {
@@ -227,9 +254,9 @@ ul {
   box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-/*-----------------------End Style for posts page-----------------------*/
+/*-----------------------End Style for posts page-----------------------*/ 
 
-
+/*-----------------------Style for recent posts-----------------------*/ 
 .recent-posts-list li {
   padding: 20px;
   background-color: #52dfc9;
@@ -247,10 +274,96 @@ ul {
   box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
 }
 
+/*-----------------------End Style for recent posts-----------------------*/ 
 
 
+/*------------------------Responsive Design------------------------*/
+/* Extra small devices (phones, 0px - 576px) */
+@media (max-width: 576px) {
+  .header-container {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem 0;
+  }
 
+  .hyperlinks-container {
+    flex-direction: column;
+    width: 100%;
+  }
 
+  .recent-posts-list {
+    width: 90vw;
+    height: auto;
+  }
 
+  .recent-posts-list li {
+    height: auto;
+    padding: 15px;
+  }
 
+  .random-message-container {
+    font-size: 1em;
+  }
+}
 
+/* Small devices (tablets, 577px - 768px) */
+@media (max-width: 768px) {
+  .recent-posts-list {
+    width: 80vw;
+  }
+
+  .hyperlinks-container {
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .posts-container,
+  .about-container {
+    padding: 1rem;
+  }
+
+  .recent-posts-list li {
+    height: auto;
+  }
+
+  .posts-header {
+    font-size: 1.5rem;
+  }
+}
+
+/* Medium devices (desktops, 769px - 992px) */
+@media (max-width: 992px) {
+  .recent-posts-list {
+    width: 60vw;
+  }
+
+  .posts-header {
+    font-size: 1.8rem;
+  }
+
+  .about-para {
+    font-size: 1.2rem;
+  }
+}
+
+/* Large devices (large desktops, 993px - 1200px) */
+@media (max-width: 1200px) {
+  .recent-posts-list {
+    width: 50vw;
+  }
+
+  .random-message-container {
+    font-size: 1.2em;
+  }
+
+  .footer-container {
+    padding: 15px;
+  }
+}
+
+/* Extra large devices (above 1200px) */
+@media (min-width: 1201px) {
+  .recent-posts-list {
+    width: 35vw;
+  }
+}
